@@ -1,5 +1,9 @@
 server:
   port: 8003
+  error:
+    whitelabel:
+      enabled: false
+  forward-headers-strategy: framework
 
 poll:
   interval: 3000
