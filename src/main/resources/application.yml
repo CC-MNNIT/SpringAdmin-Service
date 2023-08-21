@@ -1,0 +1,25 @@
+server:
+  port: 8003
+
+poll:
+  interval: 3000
+
+spring:
+  config:
+    import: optional:file:src/main/resources/secrets.yml
+  boot:
+    admin:
+      ui:
+        poll-timer:
+          cache: ${poll.interval}
+          datasource: ${poll.interval}
+          gc: ${poll.interval}
+          memory: ${poll.interval}
+          process: ${poll.interval}
+          threads: ${poll.interval}
+      instance-auth:
+        enabled: true
+  main:
+    web-application-type: reactive
+  webflux:
+    base-path: /spring-admin
